@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+  
+    <title>HTML 5 Boilerplate</title>
+    
+  </head>
+ <body>
+ <section>
+ 
+ <h2>we are going to write add contact smart contact manager</h2>
+ <div class="card">
+ 
+   <div class="card-body">
+   <h1 class="text-center">this is my add contactpage</h1>
+    <div class="container-fluid mt-1">
+       <div class="row">
+          <div class="col-md-10 offset-md-1">
+          <form action="#" th:object="${contact}"
+          method="POST"
+          enctype="multipart/form-data"
+          th:action="@{/user/process-contact}"
+          class="mt-2">
+ 
+ <!--first name-->
+ <div class="input-group">
+   <div class="input-group-prepend">
+       <div class="input-group-text">
+         <i class="fa fa-plus"></i>       </div>
+   </div>
+  
+ <input type="text" name="name" id="firstname" class="form-control" placeholder="Enter first name">
+ </div>
+ <!--second name-->
+  <div class="input-group mt-3">
+   <div class="input-group-prepend">
+       <div class="input-group-text">
+         <i class="fa fa-user-alt"></i>
+       </div>
+   </div>
+  
+ <input type="text" name="secondname" id="secondname" class="form-control" placeholder="Enter second name">
+ </div>
+  <!--phonr feild name-->
+  
+   <div class="input-group mt-3">
+   <div class="input-group-prepend">
+       <div class="input-group-text">
+         <i class="fa fa-phone"></i>
+       </div>
+   </div>
+  
+ <input type="number" name="phone" id="phone" class="form-control" placeholder="Enter phone naumber">
+ </div>
+ 
+ <!-- email-->
+  <div class="input-group mt-3">
+   <div class="input-group-prepend">
+       <div class="input-group-text">
+        @
+       </div>
+   </div>
+  
+ <input type="email" name="email" id="email" class="form-control" placeholder="Enter email id">
+ </div>
+ 
+ <!--work feild-->
+ <div class="input-group mt-3">
+   <div class="input-group-prepend">
+       <div class="input-group-text">
+         <i class="fa fa-briefcase"></i>
+       </div>
+   </div>
+  
+ <input type="text" name="work" id="work" class="form-control" placeholder="Enter your Work here">
+ </div> 
+ 
+ <!-- contact descriptipon-->
+ <div class="form-group mt-3">
+ 
+ <textarea name="description" id="description"  class="form-control" rows="10" placeholder="Enter your Desc here"></textarea>
+ 
+ </div>
+ 
+
+ 
+ <div class="containor text-center">
+ <button class="btn btn-outline-primary">save button</button>
+ </div>
+    </form>
+  
+ </div>
+ </div>
+ </div>
+</div> 
+</div>
+
+ </section>
+</body>
+</html>

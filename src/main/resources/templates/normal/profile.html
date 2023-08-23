@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+  
+    <title>HTML 5 Boilerplate</title>
+    
+  </head>
+ <body>
+ <section>
+ this is profile page
+ <div class="containor">
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#USERid</th>
+      <th scope="col"><span th:text="${user.id}"></span></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Email</th>
+      <td><span th:text="${user.email}"></span></td>
+      
+    </tr>
+       <tr>
+      <th scope="row">Role</th>
+      <td><span th:text="${user.role}"></span></td>
+      
+    </tr>
+       <tr>
+      <th scope="row">About</th>
+      <td><span th:text="${user.about}"></span></td>
+      
+    </tr>
+  </tbody>
+      </table>  
+ </section>
+ </body>
+</html>

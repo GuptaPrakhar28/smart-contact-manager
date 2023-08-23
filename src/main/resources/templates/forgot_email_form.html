@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+  
+    <title>HTML 5 Boilerplate</title>
+    
+  </head>
+ <body>
+ <section>This is custom page
+<div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <h3 class="text-center">Your OTP:</h3>
+                    <form method="post" action="" th:action="@{/send-otp}">
+                    <div class="form-group">
+                    <input name="email" type="email" placeholder="enter your email here" class="form-control" required>
+                    </div>
+                    <div class="containor text-center">
+                  <br>
+                   <button class="btn btn-warning ">SendOtp!</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+ </body>
+</html>

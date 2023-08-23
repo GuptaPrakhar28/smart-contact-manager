@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8"/>
+  
+    <title> <span th:text="${user.name}"></span></title>
+    
+  </head>
+ <body>
+ <section>
+ <h1>welcome to this showing contact details user!</h1>
+ <div class="card mr-3 ml-3" th:if="${contact}">
+   <div class="card-body">
+   <div class="containor text-center">
+      <h3 class="mt-3"><span th:text="${contact.name}"></span></h3>
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col"><span th:text="${contact.cid}"></span></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Email</th>
+      <td><span th:text="${contact.email}"></span></td>
+      
+    </tr>
+       <tr>
+      <th scope="row">Phone</th>
+      <td><span th:text="${contact.phone}"></span></td>
+      
+    </tr>
+       <tr>
+      <th scope="row">work</th>
+      <td><span th:text="${contact.work}"></span></td>
+      
+    </tr>
+  </tbody>
+      </table>
+   </div>
+   </div>
+   </div>
+   <h1 th:unless="${contact}">You dont habe permission to see this contacts fo!</h1>
+ </section>
+ </body>
+</html>
